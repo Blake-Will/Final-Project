@@ -16,21 +16,17 @@ app = Flask(__name__)
 def test():
     return render_template("index.html")
 
-@app.route("/1006")
-def test1():
-    return "<p> 1006 homepage </p>"
-
-@app.route("/1006a")
-def test2():
-    return render_template("1006.html")
-
 @app.route("/assignments")
 def assignments():
-    return "Assignments"
+    return render_template("Assignments.html")
 
 @app.route("/classes")
 def classes():
-    return "Classes"
+    return render_template("Classes.html")
+
+@app.route("/1006")
+def test1():
+    return "<p> 1006 homepage </p>"
 
 #start the server
 if __name__ == "__main__":
